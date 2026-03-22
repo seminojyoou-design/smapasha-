@@ -12,6 +12,27 @@
 
 ---
 
+## ⚠️ Important: Snipping Tool Prerequisite / 前提条件
+
+**EN:** SmaPasha uses Windows built-in Snipping Tool internally. It is recommended to **uninstall the default Snipping Tool** and use the **Preview version** instead. If you don't use Snipping Tool for video recording, we recommend removing it before use. You can always reinstall it from the [Microsoft Store](https://apps.microsoft.com/detail/9MZ95KL8MR0L).
+
+**JP:** スマパシャはWindows標準の「Snipping Tool（切り取り領域とスケッチ）」を内部で呼び出して動作しています。既存のSnipping Toolを**アンインストール**し、**プレビュー版**をご使用ください。Snipping Toolで動画撮影をしない方は、削除してからお使いください。[Microsoft Store](https://apps.microsoft.com/detail/9MZ95KL8MR0L)からいつでも再ダウンロードできます。
+
+---
+
+## 📁 Which file to use? / どっちを使う？
+
+| File | OS | Description |
+|---|---|---|
+| `main.pyw` | **Windows 11** | Standard version / 標準版 |
+| `main_win10.pyw` | **Windows 10** | Includes CF_HDROP clipboard fix for Win10 Snipping Tool / Win10のSnipping Tool用クリップボード修正付き |
+
+**EN:** Windows 10's Snipping Tool doesn't automatically set the screenshot as a file in the clipboard. The Win10 version adds `set_clipboard_file()` to handle this, so you can paste screenshots as files just like on Win11.
+
+**JP:** Win10のSnipping Toolはスクショをファイルとしてクリップボードにセットしません。Win10版では`set_clipboard_file()`を追加して、Win11と同じようにファイルとして貼り付けできるようにしています。
+
+---
+
 ## What is SmaPasha? / スマパシャとは？
 
 **EN:** SmaPasha lets you invoke Windows Snipping Tool by simply long-pressing the right mouse button (0.2 sec). No keyboard shortcut needed — your hand stays on the mouse the entire time. Screenshots are automatically saved to your chosen folder. It also includes AI-powered auto-rename using Google Gemini.
@@ -67,10 +88,14 @@ pip install pynput Pillow python-dotenv google-genai
 ## Usage / 使い方
 
 ```bash
+# Windows 11
 python main.pyw
+
+# Windows 10
+python main_win10.pyw
 ```
 
-Or just double-click `main.pyw`.
+Or just double-click `main.pyw` (Win11) or `main_win10.pyw` (Win10).
 
 1. **Launch** — A small settings window appears / 小さい設定画面が表示される
 2. **Right-click long press (0.2 sec)** — Snipping Tool pops up / Snipping Toolが起動
