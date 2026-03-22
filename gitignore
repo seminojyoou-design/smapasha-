@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+dist/
+build/
+*.spec
+
+# Environment
+.env
+
+# Settings (user-specific)
+settings.json
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
