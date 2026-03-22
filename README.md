@@ -8,7 +8,7 @@
 
 ## 🎬 Demo / デモ
 
-> *Add your demo video or GIF here*
+> *▶️ [Demo video on X (Twitter)](https://x.com/all_in_one_mite)*
 
 ---
 
